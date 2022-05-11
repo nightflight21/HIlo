@@ -11,7 +11,7 @@ namespace HiLo{
         // This is the variable that will store the current score of the user.
 
         static bool DetermineHiLo(string guess, int currentCard, int newCard){
-            string answer = "c";
+            string answer;
             if (newCard > currentCard)
             {answer = "h";}
             else if (newCard < currentCard)
