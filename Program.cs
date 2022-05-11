@@ -1,2 +1,11 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿namespace HiLo {
+    class Program {
+        static void Main() {
+            //start
+            Director game = new Director();
+
+            //ending game
+            Console.WriteLine("Thank you for playing!");
+        }
+    }
+}
