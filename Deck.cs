@@ -13,8 +13,9 @@ namespace HiLo {
         public int draw() {
             var random = new Random();
             int index = random.Next(this.deck.Count);
+            int card = this.deck[index];
             this.deck.Remove(index);
-            return this.deck[index];
+            return card;
         }
     }
 }
