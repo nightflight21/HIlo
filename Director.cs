@@ -2,15 +2,12 @@ using System;
 
 namespace HiLo{
     class Director{
-        // points
-        // take input
-        // bool still_playing
-        // game loop
-        // this would include removing the card from the 
-        
-        // This is the variable that will store the current score of the user.
 
         static bool DetermineHiLo(string guess, int currentCard, int newCard){
+            // Accepts the users guess, the current card, and the new card as
+            // parameters than determines if the guess was correct returning 
+            // True if the user guessed correctly or False if they did not.
+
             string answer;
             if (newCard > currentCard)
             {answer = "h";}
@@ -27,6 +24,9 @@ namespace HiLo{
 
         static int AdjustScore(int score, bool correct)
         {
+            // Accepts the current score and the return value for the
+            //  DetermineHiLo function and returns the adjusted score.
+            
             if (correct == true)
             {score = score + 100;}
             else
@@ -34,8 +34,8 @@ namespace HiLo{
 
             return score;
         }
-        
-        public static bool checkLoss(int score){            //public bool class that you pass the score in
+//add curly braces if the function dont work well
+        public static bool checkLoss(int score){            //public bool class that you pass the score into
                 if (score <= 0)                             //if the score is 0 or less than 0
                 return false;                               //returns a false value, preferably to a Continue or stillPlaying boolean variable
                 else                                        //else
