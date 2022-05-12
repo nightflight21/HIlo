@@ -5,13 +5,18 @@ namespace HiLo{
 
         bool again = true;
         int score = 300;
+        int currentCard = firstCard();
 
-       // Deck deck = new Deck.construct
-       // int current = Deck.draw()
+        static int firstCard(){
+        Deck deck1 = new Deck();
+        int card = deck1.draw();
+        return card;
+        }
 
-        static void playGame()
+        static void playGame(int card)
         {
             // This is the game loop.
+            Console.WriteLine($"The current card is: {card}");
 
         }
 
