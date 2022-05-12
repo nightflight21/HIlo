@@ -9,13 +9,13 @@ namespace HiLo{
         int score = 300;
         int currentCard = firstCard();
 
-        static int firstCard(){
+        public int firstCard(){
         Deck deck1 = new Deck();
         int card = deck1.draw();
         return card;
         }
 
-        static bool playGame(int card, int currentCard, int score)
+        public bool playGame(int card, int currentCard, int score)
         {
             // This is the game loop.
             Console.WriteLine($"The current card is: {card}");
@@ -32,12 +32,12 @@ namespace HiLo{
             return askContinue();
         }   
 
-        public static string guess(){
+        public string guess(){
             Console.WriteLine("Is the next card higher [h] or lower [l]?");
             string guess = Console.ReadLine();
             return guess;
         }
-        static bool DetermineHiLo(string guess, int currentCard, int newCard){
+        public bool DetermineHiLo(string guess, int currentCard, int newCard){
             // Accepts the users guess, the current card, and the new card as
             // parameters than determines if the guess was correct returning 
             // True if the user guessed correctly or False if they did not.
@@ -56,7 +56,7 @@ namespace HiLo{
             {return false;}
         }
 
-        static int AdjustScore(int score, bool correct)
+        public int AdjustScore(int score, bool correct)
         {
             // Accepts the current score and the return value for the
             //  DetermineHiLo function and returns the adjusted score.
@@ -69,14 +69,14 @@ namespace HiLo{
             return score;
         }
 //add curly braces if the function dont work well
-        public static bool checkLoss(int score){            //public bool class that you pass the score into
+        public bool checkLoss(int score){            //public bool class that you pass the score into
                 if (score <= 0)                             //if the score is 0 or less than 0
                 return false;                               //returns a false value, preferably to a Continue or stillPlaying boolean variable
                 else                                        //else
                 return true;                                //the game continues on
             }
 
-        public static bool askContinue(){                   //public bool class to get user input
+        public bool askContinue(){                   //public bool class to get user input
                 Console.WriteLine("Play again? [y/n] ");    //writes line to console to prompt player for input
                 string playAgain = Console.ReadLine();      //writes the user input to a string
                 if (playAgain == "y")                       //if the string is y
