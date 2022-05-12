@@ -19,9 +19,9 @@ namespace HiLo{
         {
             // This is the game loop.
             Console.WriteLine($"The current card is: {card}");
-            string guess = guess();
+            string guess1 = guess();
             int newCard = deck1.draw();
-            bool correct = DetermineHiLo(guess, currentCard, newCard);
+            bool correct = DetermineHiLo(guess1, currentCard, newCard);
             score = AdjustScore(score, correct);
             if (checkLoss(score) == false)
             {
