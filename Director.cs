@@ -2,23 +2,11 @@ using System;
 
 namespace HiLo{
     class Director{
-        
-        
 
-        bool again = true;
-        int score = 300;
-        int currentCard = firstCard();
-
-        public int firstCard(){
-        Deck deck1 = new Deck();
-        int card = deck1.draw();
-        return card;
-        }
-
-        public bool playGame(int card, int currentCard, int score)
+        public bool playGame(int currentCard, int score)
         {
             // This is the game loop.
-            Console.WriteLine($"The current card is: {card}");
+            Console.WriteLine($"The current card is: {currentCard}");
             string guess1 = guess();
             int newCard = deck1.draw();
             bool correct = DetermineHiLo(guess1, currentCard, newCard);
@@ -69,14 +57,14 @@ namespace HiLo{
             return score;
         }
 //add curly braces if the function dont work well
-        public bool checkLoss(int score){            //public bool class that you pass the score into
+        public static bool checkLoss(int score){            //public bool class that you pass the score into
                 if (score <= 0)                             //if the score is 0 or less than 0
                 return false;                               //returns a false value, preferably to a Continue or stillPlaying boolean variable
                 else                                        //else
                 return true;                                //the game continues on
             }
 
-        public bool askContinue(){                   //public bool class to get user input
+        public static bool askContinue(){                   //public bool class to get user input
                 Console.WriteLine("Play again? [y/n] ");    //writes line to console to prompt player for input
                 string playAgain = Console.ReadLine();      //writes the user input to a string
                 if (playAgain == "y")                       //if the string is y
