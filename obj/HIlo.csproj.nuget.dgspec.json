@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\brand\\OneDrive\\Documents\\C# code\\Hilo\\HIlo\\HIlo.csproj": {}
+    "C:\\Users\\mdcgr\\School 2022\\cse 210 (PW classes)\\HiLo\\HIlo\\HIlo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\brand\\OneDrive\\Documents\\C# code\\Hilo\\HIlo\\HIlo.csproj": {
+    "C:\\Users\\mdcgr\\School 2022\\cse 210 (PW classes)\\HiLo\\HIlo\\HIlo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\brand\\OneDrive\\Documents\\C# code\\Hilo\\HIlo\\HIlo.csproj",
+        "projectUniqueName": "C:\\Users\\mdcgr\\School 2022\\cse 210 (PW classes)\\HiLo\\HIlo\\HIlo.csproj",
         "projectName": "HIlo",
-        "projectPath": "C:\\Users\\brand\\OneDrive\\Documents\\C# code\\Hilo\\HIlo\\HIlo.csproj",
-        "packagesPath": "C:\\Users\\brand\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\brand\\OneDrive\\Documents\\C# code\\Hilo\\HIlo\\obj\\",
+        "projectPath": "C:\\Users\\mdcgr\\School 2022\\cse 210 (PW classes)\\HiLo\\HIlo\\HIlo.csproj",
+        "packagesPath": "C:\\Users\\mdcgr\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mdcgr\\School 2022\\cse 210 (PW classes)\\HiLo\\HIlo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\brand\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\mdcgr\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"

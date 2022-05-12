@@ -3,21 +3,26 @@ using System;
 namespace HiLo{
     class Director{
 
-        public bool playGame(int currentCard, int score)
+        public void playGame(int currentCard, int score, Deck deck1)
         {
             // This is the game loop.
-            Console.WriteLine($"The current card is: {currentCard}");
-            string guess1 = guess();
-            int newCard = deck1.draw();
-            bool correct = DetermineHiLo(guess1, currentCard, newCard);
-            score = AdjustScore(score, correct);
-            if (checkLoss(score) == false)
-            {
-                Console.WriteLine("Your Score went below 0. You Lose!");
-                return false;
-            }
-            Console.WriteLine($"Your score is: {score}");
-            return askContinue();
+            bool again = true;
+            while (again == true)
+                {Console.WriteLine($"The current card is: {currentCard}");
+                string guess1 = guess();
+                int newCard = deck1.draw();
+                bool correct = DetermineHiLo(guess1, currentCard, newCard);
+                score = AdjustScore(score, correct);
+                if (checkLoss(score) == false)
+                {
+                    Console.WriteLine("Your Score went below 0. You Lose!");
+                    return;
+                }
+                Console.WriteLine($"Your score is: {score}");
+                again = askContinue();
+                currentCard = newCard;
+                }
+            return;
         }   
 
         public string guess(){
@@ -39,9 +44,13 @@ namespace HiLo{
             {answer = guess;}
 
             if (answer == guess)
-            {return true;}
+            {
+                Console.WriteLine("Correct!");
+                return true;}
             else
-            {return false;}
+            {
+                Console.WriteLine("Wrong!");
+                return false;}
         }
 
         public int AdjustScore(int score, bool correct)
