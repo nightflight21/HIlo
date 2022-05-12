@@ -2,19 +2,41 @@ using System;
 
 namespace HiLo{
     class Director{
+        
+        
 
         bool again = true;
         int score = 300;
+        int currentCard = firstCard();
 
-       // Deck deck = new Deck.construct
-       // int current = Deck.draw()
-
-        static void playGame()
-        {
-            // This is the game loop.
-
+        static int firstCard(){
+        Deck deck1 = new Deck();
+        int card = deck1.draw();
+        return card;
         }
 
+        static bool playGame(int card, int currentCard, int score)
+        {
+            // This is the game loop.
+            Console.WriteLine($"The current card is: {card}");
+            string guess = guess();
+            int newCard = deck1.draw();
+            bool correct = DetermineHiLo(guess, currentCard, newCard);
+            score = AdjustScore(score, correct);
+            if (checkLoss(score) == false)
+            {
+                Console.WriteLine("Your Score went below 0. You Lose!");
+                return false;
+            }
+            Console.WriteLine($"Your score is: {score}");
+            return askContinue();
+        }   
+
+        public static string guess(){
+            Console.WriteLine("Is the next card higher [h] or lower [l]?");
+            string guess = Console.ReadLine();
+            return guess;
+        }
         static bool DetermineHiLo(string guess, int currentCard, int newCard){
             // Accepts the users guess, the current card, and the new card as
             // parameters than determines if the guess was correct returning 
