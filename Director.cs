@@ -34,7 +34,7 @@ namespace HiLo{
 
             return score;
         }
-
+//add curly braces if the function dont work well
         public static bool checkLoss(int score){            //public bool class that you pass the score into
                 if (score <= 0)                             //if the score is 0 or less than 0
                 return false;                               //returns a false value, preferably to a Continue or stillPlaying boolean variable
