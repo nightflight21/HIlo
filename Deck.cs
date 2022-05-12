@@ -8,10 +8,12 @@ namespace HiLo {
                     deck.Add(j);
                 }
             }
+            Console.WriteLine("here");
         }
 
         public int draw() {
-            var random = new Random();
+            Console.WriteLine(this.deck[31]);
+            Random random = new Random();
             int index = random.Next(this.deck.Count);
             int card = this.deck[index];
             this.deck.Remove(index);
