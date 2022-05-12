@@ -2,6 +2,13 @@ using System;
 
 namespace HiLo{
     class Director{
+        
+        
+        public static string guess(){
+            Console.WriteLine("Is the next card higher [h] or lower [l]?");
+            string guess = Console.ReadLine();
+            return guess;
+        }
 
         static bool DetermineHiLo(string guess, int currentCard, int newCard){
             // Accepts the users guess, the current card, and the new card as
