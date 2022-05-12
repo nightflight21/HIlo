@@ -3,6 +3,18 @@ using System;
 namespace HiLo{
     class Director{
 
+        bool again = true;
+        int score = 300;
+
+       // Deck deck = new Deck.construct
+       // int current = Deck.draw()
+
+        static void playGame()
+        {
+            // This is the game loop.
+
+        }
+
         static bool DetermineHiLo(string guess, int currentCard, int newCard){
             // Accepts the users guess, the current card, and the new card as
             // parameters than determines if the guess was correct returning 
